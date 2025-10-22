@@ -121,6 +121,7 @@ body {
 .btn-primary {
     background: #3b82f6;
     color: white;
+    margin-bottom: 10px;
 }
 
 .btn-primary:hover {
@@ -228,7 +229,7 @@ body {
 /* Store Screen */
 .store-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 100%;
 }
 
 .store-header {
@@ -239,7 +240,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    width: 80%;
+    margin: 30px auto;
 }
 
 .store-title h1 {
@@ -272,8 +274,18 @@ body {
 
 .store-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 80% 20%;
     gap: 30px;
+    max-width: 100%;
+    align-items: start;
+}
+
+.store-content > * {
+    min-width: 0;
+}
+
+.seat-section {
+    overflow: hidden;
 }
 
 /* Theater */
@@ -304,6 +316,9 @@ body {
 
 .seat-map {
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .seat-row {
@@ -324,7 +339,7 @@ body {
     display: flex;
     gap: 4px;
     overflow-x: auto;
-    padding: 5px;
+    padding: 7px;
 }
 
 .seat {
@@ -389,6 +404,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 90%;
+    box-sizing: border-box;
 }
 
 .event-card, .summary-card {
@@ -523,7 +540,7 @@ body {
 }
 
 .folio-number {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 800;
     color: #059669;
     font-family: 'Courier New', monospace;
@@ -578,10 +595,10 @@ body {
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 30px;
-    display: flex;
+    display: grid;
     align-items: flex-start;
     gap: 10px;
-    text-align: left;
+    text-align: center;
     font-size: 14px;
 }
 
@@ -899,16 +916,21 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        width: 100%;
     }
     
     .seats-container {
         justify-content: flex-start;
     }
     
+    .info-section {
+        width: 100%;
+    }
+
     .seat {
         width: 20px;
         height: 20px;
-        font-size: 8px;
+        font-size: 11px;
     }
     
     .form-row {
